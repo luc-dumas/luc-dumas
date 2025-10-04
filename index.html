@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <!-- Anime.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luc Dumas Portfolio</title>
+
+  <!-- Typography.js + Parnassus theme -->
+  <script src="https://unpkg.com/typography@0.16.19/dist/typography.min.js"></script>
+  <script src="https://unpkg.com/typography-theme-parnassus/dist/index.umd.js"></script>
+    <script src="js/flickity.pkgd.min.js"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Karla:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/flickity.css" media="screen">
+  <style>
+    /* Align contact icons and text nicely */
+    #contact p {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      margin: 0.5em 0;
+    }
+    #contact span[style*="inline-block"] {
+      min-width: 1.2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 1.2em;
+    }
+    #contact svg {
+      display: block;
+      height: 1.2em;
+      width: 1.2em;
+    }
+    /* Remove link decoration and inherit color for contact section only */
+    #contact a {
+      text-decoration: none;
+      color: inherit;
+    }
+    body {
+      font-family: "Karla", sans-serif;
+      line-height: 1.7;
+      max-width: 720px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      background: #fff;
+      overflow-x: hidden;
+    }
+    h1,h2,h3 {
+      font-family: "Quicksand", sans-serif;
+      font-weight: 700;
+    }
+
+    header {
+      margin-bottom: 3rem;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeSlideDown 1s ease forwards;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      margin-right: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      color: inherit;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      height: 2px;
+      background: #111;
+      transition: width 0.3s ease;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    section {
+      margin-bottom: 4rem;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1s ease forwards;
+    }
+    section:nth-of-type(1) { animation-delay: 0.3s; }
+    section:nth-of-type(2) { animation-delay: 0.6s; }
+    section:nth-of-type(3) { animation-delay: 0.9s; }
+
+    h2 {
+      /* border-left: 4px solid #111; */
+      padding-left: 0;
+      margin-bottom: 1rem;
+      opacity: 0;
+      transform: translateX(-20px);
+      animation: slideIn 0.8s ease forwards;
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s ease forwards 1.2s;
+    }
+
+    .avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;   /* makes it circular */
+        object-fit: cover;    
+        vertical-align: middle;
+        margin-right: 0.5rem; 
+        margin-left: 0.5rem; 
+    }
+.gallery {
+  background: #EEE;
+}
+
+.gallery-cell {
+  width: 50%;
+  height: 273px;
+  margin-right: 10px;
+  counter-increment: gallery-cell;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gallery-cell img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+    /* Keyframes */
+    @keyframes fadeSlideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>
+        Luc Dumas
+        <img src="images/img20.jpeg" alt="Luc" class="avatar">
+    </h1>
+    <p>Full-Stack Developer • Builder • Creator</p>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#craftsmanship">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="projects">
+      <section id="experience" style="margin-top: 50px;">
+        <h2>My Experience</h2>
+        <div id="exp-timeline" style="display:flex;align-items:center;gap:30px;margin:32px 0 40px 0;justify-content:center;">
+
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <div class="exp-dot" style="width:20px;height:20px;border-radius:50%;background:#333;"></div>
+            <span style="font-size:0.95em;color:#444;margin-top:6px;">2022–25</span>
+          </div>
+          <div class="exp-bar" style="width:60%;height:4px;background:#333;"></div>
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <div class="exp-dot" style="width:20px;height:20px;border-radius:50%;background:#111;"></div>
+            <span style="font-size:0.95em;color:#222;margin-top:6px;">2025–Now</span>
+          </div>
+        </div>
+        <p>
+        <div style="margin-bottom: 2em; border-left: 2px solid #111; padding-left: 1em;">
+          <strong style="color:#111;">Union Web Solutions, Freelance Full-Stack Engineer</strong>
+          <span style="float:right; color:#222; font-size:0.98em;">August 2025 - Present</span>
+          <ul style="margin-top:0.5em;">
+            <li>Develop custom web applications and sites using React, Next.js, TypeScript, and Postgres, with headless CMSs for content management.</li>
+            <li>Implement features including authentication, payments, and content workflows tailored to small and medium-sized businesses.</li>
+          </ul>
+        </div>
+        <div style="margin-bottom: 2em; border-left: 2px solid #333; padding-left: 1em;">
+          <strong style="color:#333;">WeVideo, Software Engineer</strong>
+          <span style="float:right; color:#444; font-size:0.98em;">August 2022 - July 2025</span>
+          <ul style="margin-top:0.5em;">
+            <li>Built and maintained full-stack features across a Vue + Node.js/Express/MySQL stack, contributing to several core microservices.</li>
+            <li>Upgraded PlayPosit from Vue 2 → Vue 3, a large-scale migration across multiple microservices that improved maintainability and stability.</li>
+            <li>Integrated PlayPosit into the WeVideo ecosystem by rewriting the standalone app into WeVideo’s suite and assisting in the migration of backend services from Express/MySQL to Java/Oracle, collaborating with backend teams.</li>
+            <li>Contributed to the full rewrite of the PlayPosit app in React, building the combined WeVideo + PlayPosit platform and enabling seamless integration with WeVideo’s video editor.</li>
+            <li>Implemented and maintained LTI integrations with external learning management systems, enabling wide adoption by schools and enterprises.</li>
+            <li>Developed and maintained 10+ video player integrations on top of video.js, supporting diverse media workflows and use cases.</li>
+            <li>Integrated AI-powered features using the ChatGPT API to enhance client interactions and automate workflows.</li>
+          </ul>
+        </div>
+      
+        </p>
+      </section>
+
+      <section id="projects" style="margin-top: 75px;">
+        <h2>Current Projects</h2>
+
+        <div style="margin-bottom:2em;">
+          <h3 style="margin-bottom:0.2em;">Stripe Late Invoice Reminder</h3>
+          <p style="margin-top:0;">Full-stack app using React, Node.js/Express, Stripe API, and Twilio to automate late-payment notifications for small businesses. Currently being prepared for launch on the Stripe App Marketplace.</p>
+        </div>
+
+        <div style="margin-bottom:2em;">
+          <h3 style="margin-bottom:0.2em;">Union Web Solutions Client Sites</h3>
+          <p style="margin-top:0;">Web apps and sites for small businesses built with Next.js, TypeScript, Payload CMS, and Postgres, including features like authentication, payments, and CMS-driven content workflows.</p>
+        </div>
+      </section>
+    <section id="craftsmanship" style="margin-top: 75px;">
+      <h2>About</h2>
+      <p>
+        I was drawn to software development several years ago after realizing how much of a craft it can be. 
+        Craftsmanship is a life long passion of mine. My dad is a french chef, and I spent my teenage years working in his kitchen. 
+        I then worked on an apple/peach orchard for 3 years; at that point in my life I began to met so many incredible people, craftsman who openly shared with me their knowledge and passion. I've since done carpentry, cabinetry, furniture making, campervan building, timber framing, and of course, software development!
+        Craftsmanship to me is a mindset of dedication, curiosity, teamwork, and perseverance. It’s creating something with intention and integrity. 
+        <br>
+        <br> I feel like implementing a new feature or architecting a codebase is a lot like designing a kitchen or a timber frame in some ways &mdash; you take a large complex problem and work your way back, 
+        carefully breaking it down into smaller and smaller parts until it all becomes manageable.
+    </section>
+    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+      <div class="gallery-cell"><img src="images/img23.jpg" alt="Craft 1" style="width:100%;height:360px;object-fit:cover;"></div>
+      <div class="gallery-cell"><img src="images/img18.jpg" alt="Craft 2" style="width:100%;height:360px;object-fit:cover;"></div>
+      <div class="gallery-cell"><img src="images/img17.jpg" alt="Craft 3" style="width:100%;height:360px;object-fit:cover;"></div>
+      <div class="gallery-cell"><img src="images/img16.jpg" alt="Craft 4" style="width:100%;height:360px;object-fit:cover;"></div>
+      <div class="gallery-cell"><img src="images/img25.jpeg" alt="Craft 1" style="width:100%;height:360px;object-fit:cover;"></div>
+      <div class="gallery-cell"><img src="images/img22.jpeg" alt="Craft 1" style="width:100%;height:360px;object-fit:cover;"></div>
+      <div class="gallery-cell"><img src="images/img10.jpg" alt="Craft 5" style="width:100%;height:360px;object-fit:cover;"></div>
+      <div class="gallery-cell"><img src="images/img4.jpeg" alt="Craft 1" style="width:100%;height:360px;object-fit:cover;"></div>
+      <div class="gallery-cell"><img src="images/img7.jpeg" alt="Craft 2" style="width:100%;height:360px;object-fit:cover;"></div>
+      <div class="gallery-cell"><img src="images/img13.jpg" alt="Craft 3" style="width:100%;height:360px;object-fit:cover;"></div>
+      <div class="gallery-cell"><img src="images/img15.jpg" alt="Craft 4" style="width:100%;height:360px;object-fit:cover;"></div>
+      <div class="gallery-cell"><img src="images/img11.jpg" alt="Craft 5" style="width:100%;height:360px;object-fit:cover;"></div>
+      <div class="gallery-cell"><img src="images/img1.jpeg" alt="Craft 5" style="width:100%;height:360px;object-fit:cover;"></div>
+      <div class="gallery-cell"><img src="images/img24.jpg" alt="Craft 1" style="width:100%;height:360px;object-fit:cover;"></div>
+    </div>
+
+    <section id="contact" style="margin-top: 75px;">
+        <h2 >Contact</h2>
+        <p><b>Feel free to reach out!</b></p>
+      <p>
+        <span style="vertical-align:middle;display:inline-block;width:1.2em;height:1.2em;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1.2em;height:1.2em;vertical-align:middle;"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
+        </span>
+        Email: <a href="mailto:luc.dumas3@gmail.com">luc.dumas3@gmail.com</a>
+      </p>
+      <p>
+        <span style="vertical-align:middle;display:inline-block;width:1.2em;height:1.2em;">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:1.2em;height:1.2em;vertical-align:middle;"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.867 8.166 6.839 9.489.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.529 2.341 1.088 2.91.832.092-.646.35-1.088.636-1.339-2.221-.253-4.555-1.112-4.555-4.951 0-1.093.39-1.987 1.029-2.686-.103-.253-.446-1.272.098-2.65 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.748-1.025 2.748-1.025.546 1.378.202 2.397.1 2.65.64.699 1.028 1.593 1.028 2.686 0 3.848-2.337 4.695-4.566 4.944.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.749 0 .268.18.579.688.481C19.135 20.163 22 16.417 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        </span>
+        GitHub: <a href="https://github.com/luc-dumas" target="_blank">https://github.com/luc-dumas</a>
+      </p>
+      <p>
+        <span style="vertical-align:middle;display:inline-block;width:1.2em;height:1.2em;">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:1.2em;height:1.2em;vertical-align:middle;"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.29c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm15.5 10.29h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z"/></svg>
+        </span>
+        LinkedIn: <a href="https://linkedin.com/in/lucpdumas" target="_blank">linkedin.com/in/lucpdumas</a>
+      </p>
+
+      <p>
+        <span style="vertical-align:middle;display:inline-block;width:1.2em;height:1.2em;">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:1.2em;height:1.2em;vertical-align:middle;"><path d="M17.53 2.47a2.5 2.5 0 0 1 3.54 3.53l-5.47 5.47 5.47 5.47a2.5 2.5 0 1 1-3.54 3.54l-5.47-5.47-5.47 5.47a2.5 2.5 0 1 1-3.54-3.54l5.47-5.47-5.47-5.47A2.5 2.5 0 1 1 6.59 2.47l5.47 5.47 5.47-5.47z"/></svg>
+        </span>
+        X: <a href="https://x.com/LucDumas10" target="_blank">@LucDumas10</a>
+      </p>
+    </section>
+  </main>
+
+  <script>
+    // Original anime.js timeline for experience graphic
+    if (window.anime) {
+      anime.timeline({loop: false})
+        .add({
+          targets: '#exp-timeline .exp-dot',
+          scale: [0, 1],
+          opacity: [0, 1],
+          easing: 'easeOutBack',
+          duration: 700,
+          delay: anime.stagger(350)
+        })
+        .add({
+          targets: '#exp-timeline .exp-bar',
+          scaleX: [0, 1],
+          opacity: [0, 1],
+          easing: 'easeOutExpo',
+          duration: 700,
+          delay: anime.stagger(350),
+          offset: '-=500'
+        });
+    }
+    // Initialize Typography.js with Parnassus theme
+    const typography = new Typography(TypographyThemeParnassus);
+    typography.injectStyles();
+
+      const items = document.querySelectorAll('.carousel-container img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  items.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+  </script>
+</body>
+</html>
