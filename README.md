@@ -38,10 +38,8 @@ Web apps and sites for small businesses built with Next.js, TypeScript, Payload 
 ## Contact
 
 📧 **Email:** [luc.dumas3@gmail.com](mailto:luc.dumas3@gmail.com)  
-💻 **GitHub:** [github.com/luc-dumas](https://github.com/luc-dumas)  
 🔗 **LinkedIn:** [linkedin.com/in/lucpdumas](https://linkedin.com/in/lucpdumas)  
 🐦 **X:** [@LucDumas10](https://x.com/LucDumas10)  
 
 ---
 
-© 2025 Luc Dumas
