@@ -1,8 +1,6 @@
-# Luc Dumas ![Luc](images/img20.jpeg){: .avatar }
+# Luc Dumas
 
-**Full-Stack Developer • Builder • Creator**
-
-[Projects](#projects) • [About](#about) • [Contact](#contact)
+**Full-Stack Engineer • Builder • Creator**
 
 ---
 
@@ -34,29 +32,6 @@ Full-stack app using React, Node.js/Express, Stripe API, and Twilio to automate 
 
 ### Union Web Solutions Client Sites
 Web apps and sites for small businesses built with Next.js, TypeScript, Payload CMS, and Postgres, including authentication, payments, and CMS-driven content workflows.
-
----
-
-## About
-
-I was drawn to software development after realizing how much of a **craft** it can be.  
-Craftsmanship has always been a passion of mine:
-
-- Grew up in my father’s French kitchen.  
-- Worked on an apple/peach orchard for 3 years, surrounded by craftspeople.  
-- Carpentry, cabinetry, furniture making, campervan building, timber framing, and software.  
-
-Craftsmanship is dedication, curiosity, teamwork, and perseverance — creating something with intention and integrity. Implementing a new feature or architecting a codebase is a lot like designing a kitchen or timber frame: you break a large complex problem into smaller, manageable parts.
-
-### Craftsmanship Gallery
-
-| | | |
-|---|---|---|
-| ![](images/img23.jpg) | ![](images/img18.jpg) | ![](images/img17.jpg) |
-| ![](images/img16.jpg) | ![](images/img25.jpeg) | ![](images/img22.jpeg) |
-| ![](images/img10.jpg) | ![](images/img4.jpeg) | ![](images/img7.jpeg) |
-| ![](images/img13.jpg) | ![](images/img15.jpg) | ![](images/img11.jpg) |
-| ![](images/img1.jpeg) | ![](images/img24.jpg) | |
 
 ---
 
