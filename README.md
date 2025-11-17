@@ -20,7 +20,7 @@
     src="images/invoice.gif" 
     alt="Invoice app dashboard" 
     border="1"
-    style="border-radius: 8px; max-width: 100; margin: 20px 0;
+    style="border-radius: 8px; max-width: 100; margin: 20px 0;"
   />
 </p>
     
@@ -74,7 +74,7 @@ A full-stack invoicing platform built with Nuxt 3, Supabase, and Postgres, focus
     src="images/payload.gif" 
     alt="Artwork CMS and portfolio preview" 
     border="1"
-    style="border-radius: 8px; max-width: 100; margin: 20px 0;
+    style="border-radius: 8px; max-width: 100; margin: 20px 0;"
   />
 </p>
     
