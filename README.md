@@ -13,11 +13,21 @@
 ### Dueful – Invoicing Platform  
 [**dueful.digital →**](https://dueful.digital)
 
-![Invoice app dashboard](images/invoice.gif)
+<br>
 
-A full-stack invoicing platform built with Nuxt 3, Supabase, and Postgres, focused on being fast, clean, and easy to use.  
+<p align="center">
+  <img 
+    src="images/invoice.gif" 
+    alt="Invoice app dashboard" 
+    border="1"
+    style="border-radius: 8px; max-width: 100; margin: 20px 0;
+  />
+</p>
+    
+<br><br>
 
-This is a lightweight invoicing app that handles multi-business accounts, customers, invoices with dynamic line items, due dates, notes, PDF exports, and a clean dashboard. I built it end-to-end: database schema, RLS rules, state management, and UI. Future roadmap includes email sending, reminder automation, and e-signature integration.
+
+A full-stack invoicing platform built with Nuxt 3, Supabase, and Postgres, focused on being fast, clean, and easy to use. This is a lightweight invoicing app that handles multi-business accounts, customers, invoices with dynamic line items, due dates, notes, PDF exports, and a clean dashboard. I built it end-to-end: database schema, RLS rules, state management, and UI. Future roadmap includes email sending, reminder automation, and e-signature integration.
 
 #### Core Features
 
@@ -57,7 +67,20 @@ This is a lightweight invoicing app that handles multi-business accounts, custom
 ### Artwork CMS + Portfolio  
 [**henridumas.art →**](https://henridumas.art)
 
-![Artwork CMS and portfolio preview](images/payload.gif)
+<br>
+
+<p align="center">
+  <img 
+    src="images/payload.gif" 
+    alt="Artwork CMS and portfolio preview" 
+    border="1"
+    style="border-radius: 8px; max-width: 100; margin: 20px 0;
+  />
+</p>
+    
+<br><br>
+
+
 
 A fast, minimal art portfolio built with Next.js and a structured content backend. New artworks, series, and pages can be added without touching code, keeping publishing simple and efficient.
 
