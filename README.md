@@ -4,6 +4,101 @@
 
 ---
 
+<br>
+
+## Recent Work
+
+
+
+### Dueful – Invoicing Platform  
+[**dueful.digital →**](https://dueful.digital)
+
+![Invoice app dashboard](images/invoice.gif)
+
+A full-stack invoicing platform built with Nuxt 3, Supabase, and Postgres, focused on being fast, clean, and easy to use.  
+
+This is a lightweight invoicing app that handles multi-business accounts, customers, invoices with dynamic line items, due dates, notes, PDF exports, and a clean dashboard. I built it end-to-end: database schema, RLS rules, state management, and UI. Future roadmap includes email sending, reminder automation, and e-signature integration.
+
+#### Core Features
+
+- Dashboard with revenue summaries and recent activity  
+- Customer management with search and quick actions  
+- Invoice creation flow with live totals and validation  
+- Status filtering: paid, unpaid, overdue, upcoming  
+- Print-ready PDF invoice generation  
+- Responsive UI optimized for mobile and desktop  
+
+<details>
+<summary><strong>Technical details</strong></summary>
+
+##### Tech stack
+
+- Nuxt 3, Vue 3 (Composition API), Nuxt UI, Tailwind CSS  
+- Supabase Auth, Postgres with Row-Level Security  
+- Pinia for auth, invoices, customers, and business state  
+- Puppeteer for server-side PDF generation  
+- Email delivery via Postmark/SendGrid, Stripe for payments (planned)  
+
+##### Architecture
+
+- Postgres relational schema (businesses, customers, invoices, items)  
+- Multi-tenant structure with strict RLS by <code>business_id</code>  
+- Supabase Auth for identity + policy enforcement  
+- Pinia store for cross-page state and active business context  
+- Nuxt 3 server routes for secure actions (PDF generation, DB ops)  
+- Component-driven UI using Nuxt UI  
+- Puppeteer-based PDF generator with a dedicated template  
+- Clean folder architecture with composables, stores, and API routes  
+
+</details>
+
+---
+
+### Artwork CMS + Portfolio  
+[**henridumas.art →**](https://henridumas.art)
+
+![Artwork CMS and portfolio preview](images/payload.gif)
+
+A fast, minimal art portfolio built with Next.js and a structured content backend. New artworks, series, and pages can be added without touching code, keeping publishing simple and efficient.
+
+#### Core Features
+
+- Custom content types for artworks, series, and pages  
+- Rich text and media field support  
+- Responsive gallery rendering  
+- SEO-friendly routing  
+
+<details>
+<summary><strong>Technical details</strong></summary>
+
+##### Tech stack
+
+- Next.js, React, TypeScript  
+- Custom CMS (Node.js + Express)  
+- Tailwind CSS for layout and typography  
+- API-driven content (REST/JSON)  
+
+##### Architecture
+
+- CMS defines structured schema  
+- Next.js statically generates public pages  
+- Incremental revalidation on content change  
+
+</details>  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <br>
+  
 ## My Experience
 
 **Union Web Solutions, Freelance Full-Stack Engineer**  
@@ -23,17 +118,7 @@ _August 2022 – July 2025_
 - Developed and maintained 10+ video player integrations on top of video.js.  
 - Integrated AI-powered features using the ChatGPT API.  
 
----
-
-## Current Projects
-
-### Stripe Late Invoice Reminder
-Full-stack app using React, Node.js/Express, Stripe API, and Twilio to automate late-payment notifications for small businesses. Being prepared for launch on the Stripe App Marketplace.
-
-### Union Web Solutions Client Sites
-Web apps and sites for small businesses built with Next.js, TypeScript, Payload CMS, and Postgres, including authentication, payments, and CMS-driven content workflows.
-
----
+<br>
 
 ## Contact
 
