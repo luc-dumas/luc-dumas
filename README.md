@@ -125,13 +125,13 @@ A fast, minimal art portfolio built with Next.js and a structured content backen
 ## My Experience
 
 **Union Web Solutions, Freelance Full-Stack Engineer**  
-_August 2025 – Present_
+_2026 – Present_
 
 - Develop custom web applications and sites using React, Next.js, TypeScript, and Postgres, with headless CMSs for content management.  
 - Implement features including authentication, payments, and content workflows tailored to small and medium-sized businesses.  
 
 **WeVideo, Software Engineer**  
-_August 2022 – July 2025_
+_August 2022 – 2025_
 
 - Built and maintained full-stack features across a Vue + Node.js/Express/MySQL stack, contributing to several core microservices.  
 - Upgraded PlayPosit from Vue 2 → Vue 3, a large-scale migration across multiple microservices that improved maintainability and stability.  
